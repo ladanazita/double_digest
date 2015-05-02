@@ -39,7 +39,6 @@ The objective of this project is to:
 *	Implement social authentication (Facebook, Twitter, etc)
 
 <h4>Keep in Mind</h4>
-
 **Make sure your code is:**
 
 *	Consistent
