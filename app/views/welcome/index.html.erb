@@ -1,2 +1,8 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<div>
+     <% if current_user %>
+          Welcome <strong><%= current_user.name%></strong>!
+          <%= link_to 'Sign out', signout_path %>
+     <%else%>
+          <%= link_to "Sign in with Twitter", "/auth/twitter" %>
+     <%end%>
+</div>
