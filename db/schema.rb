@@ -19,12 +19,14 @@ ActiveRecord::Schema.define(version: 20150505012807) do
   create_table "comments", force: :cascade do |t|
     t.string   "body"
     t.integer  "trend_id"
+    t.integer  "user_id"
     t.integer  "video_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   add_index "comments", ["trend_id"], name: "index_comments_on_trend_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
   add_index "comments", ["video_id"], name: "index_comments_on_video_id", using: :btree
 
   create_table "trends", force: :cascade do |t|
@@ -62,6 +64,7 @@ ActiveRecord::Schema.define(version: 20150505012807) do
   add_index "videos", ["trend_id"], name: "index_videos_on_trend_id", using: :btree
 
   add_foreign_key "comments", "trends"
+  add_foreign_key "comments", "users"
   add_foreign_key "comments", "videos"
   add_foreign_key "videos", "trends"
 end
