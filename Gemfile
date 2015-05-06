@@ -33,6 +33,9 @@ gem 'bootstrap-sass', '~> 3.3.4'
 
 gem 'figaro'
 
+gem 'twitter'
+
+gem 'httparty', '0.11.0'
 
 # gem 'bcrypt', '~> 3.1.7'
 
