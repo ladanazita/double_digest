@@ -1,8 +1,16 @@
-<div>
-     <% if current_user %>
-          Welcome <strong><%= current_user.name%></strong>!
-          <%= link_to 'Sign out', signout_path %>
-     <%else%>
-          <%= link_to "Sign in with Twitter", "/auth/twitter" %>
-     <%end%>
+
+<div class="row col-l-12 vid-title">
+	<h2>VIDEO #1</h2>
 </div>
+
+<div class="main_content" id="index-banner">
+
+  <div class="container">
+
+	<div class="embed-container-l">
+		<iframe src="https://www.youtube.com/embed/ZhfJX46P2Jk" frameborder="0" allowfullscreen></iframe>
+       </div>
+
+  </div> <!-- end of div container -->
+</div> <!-- end of div main_content -->
+

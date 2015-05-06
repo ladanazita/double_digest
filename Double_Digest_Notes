@@ -1,0 +1,126 @@
+Double_Digest_Notes
+
+<div class="row center-align">
+     <div class="col s12 m12 l12 lime lighten-1">
+
+     </div>
+     <div class="col s6 m6 l6 green lighten-2">
+
+           <iframe width="400" height="400" src="http://www.youtube.com/watch?v=NOoByY7AVWg?rel=0"></iframe>
+
+     </div>
+     <div class="col s6 m6 l6 amber darken-1">
+   	<iframe width="400" height="400" src="http://www.youtube.com/watch?v=A5w6UWjqcdg?rel=0"></iframe>
+   	</div>
+
+<!DOCTYPE html>
+<html ng-app="materialize">
+<head>
+  <title>MaterializeDemo</title>
+  <link rel="stylesheet" media="all" href="/assets/application-64b68dee93c42d11c351ad859f89a26a233e1980e31c6850f33d9cf58c8b7342.css" data-turbolinks-track="true" />
+  <script src="/assets/application-d901dab9a4889971378157d91cf06190ece2ef4454310f1a4edd3c41730565f9.js" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="TvnEKGURQ3fyat7NpQ3tg0bITklmETtij/xtFPffylHRACLFvP+t3zxoAuKv/ViUbBu6lYL6Mg9wjcCnQuftNA==" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+</head>
+<body ng-controller="MoviesController as movies">
+
+<nav role="navigation" class="grey darken-4">
+  <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><span class="mdi-av-movie"></span> Flicker</a>
+  </div>
+</nav>
+
+<div class="section no-pad-bot" id="index-banner">
+  <div class="container">
+    <div class="row center">
+      <a href="#search" id="download-button" class="btn-large waves-effect waves-light orange darken-3"><i class="mdi-maps-local-movies left"></i>Find your favorite movies</a>
+    </div>
+
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center light blue-text"><i class="mdi-av-movie"></i></h2>
+          <h5 class="center">Our movie database</h5>
+        </div>
+      </div>
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center light blue-text"><i class="mdi-action-search"></i></h2>
+          <h5 class="center">Find your movie</h5>
+        </div>
+      </div>
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center light blue-text"><i class="mdi-social-public"></i></h2>
+          <h5 class="center">Badass community</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section blue lighten-5" id="search">
+  <div class="container">
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="mdi-editor-mode-edit prefix"></i>
+        <input id="icon_prefix" type="text" class="validate" ng-model="movies.movie">
+        <label for="icon_prefix">Search Movie</label>
+        <button class="btn waves-effect waves-light col s12" ng-click="movies.searchMovie()">
+          Search
+          <i class="mdi-content-send right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div ng-show="movies.foundMovie" class="row">
+  <div class="col s12 m4 offset-m4">
+    <div class="card">
+      <div class="card-image">
+        <img src="{{movies.foundMovie.Poster}}" />
+        <span class="card-title">{{movies.foundMovie.Title}}</span>
+
+      </div>
+      <div class="card-content">
+        <p>{{movies.foundMovie.Plot}}</p>
+        <br />
+        <b>Genre: </b><span>{{movies.foundMovie.Genre}}</span>
+        <br />
+        <b>Released: </b> <span>{{movies.foundMovie.Released}}</span>
+        <br />
+        <b>Awards: </b><span>{{movies.foundMovie.Awards}}</span>
+
+      </div>
+      <div class="card-action">
+        <b>Metascore: </b><a href="#">{{movies.foundMovie.Metascore}}</a>
+        <b>IMBD: </b><a href="#">{{movies.foundMovie.imdbRating}} on {{movies.foundMovie.imdbVotes}} votes</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="page-footer grey darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Created by <a class="orange-text text-lighten-3" href="http://github.com/syang019">Stanley Yang</a>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>

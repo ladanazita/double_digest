@@ -1,0 +1,73 @@
+How to define height of header ? (CSS / HTML related)
+
+<div class="row center-align"> Took out
+
+ALL MODEL INFO
+
+User
+Comment
+Trend
+Video
+p.s. (Sessions Controller)
+
+User with Twitter should be able to log-in (i.e. create new session)
+User with Twitter should be able to log-out (i.e. destroy session)
+
+User with Twitter should be able to create comment on video
+User with Twitter should be able to post comment on video
+
+Test if information from user is being stored correctly like name, email, profile_image, etc.
+
+
+create_table "comments", force: :cascade do |t|
+    t.string   "body"
+    t.integer  "trend_id"
+    t.integer  "user_id"
+    t.integer  "video_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "comments", ["trend_id"], name: "index_comments_on_trend_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
+  add_index "comments", ["video_id"], name: "index_comments_on_video_id", using: :btree
+
+  create_table "trends", force: :cascade do |t|
+    t.string   "name"
+    t.string   "query"
+    t.integer  "woeid"
+    t.string   "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_digest"
+    t.string   "profile_image"
+    t.string   "provider"
+    t.integer  "uid"
+    t.integer  "token"
+    t.integer  "secret"
+    t.integer  "oauth_token"
+    t.datetime "oauth_token_expires_at"
+    t.string   "role"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "videos", force: :cascade do |t|
+    t.string   "url"
+    t.integer  "trend_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "videos", ["trend_id"], name: "index_videos_on_trend_id", using: :btree
+
+  add_foreign_key "comments", "trends"
+  add_foreign_key "comments", "users"
+  add_foreign_key "comments", "videos"
+  add_foreign_key "videos", "trends"
+end
