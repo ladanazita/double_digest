@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'trends/index'
+
+  get 'trends/show'
+
   root 'welcome#index'
     resources :user
       resources :trend
