@@ -4,6 +4,6 @@ class ApplicationController < ActionController::Base
   before_filter :load_tweets
 
 	def load_tweets
-   		@tweets = $twitter.home_timeline[0..10]
+   		@tweets = $twitter.home_timeline[0..50]
    	end
 end
