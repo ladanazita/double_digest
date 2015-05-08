@@ -1,10 +1,10 @@
 <div>
      <% if current_user %>
-          Welcome <strong><%= current_user.name%></strong>!
+          Welcome <strong><%= current_user.name%></strong>
           <%= link_to 'Sign out', signout_path %>
      <%else%>
           <%= link_to "Sign in with Twitter", "/auth/twitter" %>
      <%end%>
 </div>
 
-<%= render 'trends/tweets' %>
+<!-- <%= render 'trends/tweets' %> -->
