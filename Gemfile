@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.2.1'
 
-ruby '2.0.0'
+ruby '2.2.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use postgresql as the database for Active Record
@@ -45,6 +45,9 @@ gem 'httparty', '0.11.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+
+# gems we want to run  in production
 group :production do
      gem 'rails_12factor'
      gem 'thin'
@@ -54,6 +57,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'better_errors'
+  gem 'rspec-rails'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
