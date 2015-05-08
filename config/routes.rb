@@ -5,8 +5,10 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
     resources :user
+    namespace :api do
       resources :trend
         resources :video
+    end
           resources :comment
   match '/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   match '/auth/failure', to: redirect('/'), via: [:get, :post]
