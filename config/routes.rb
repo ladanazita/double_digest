@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
     resources :user
     namespace :api do
-      resources :trend
+      resources :trends
         resources :video
     end
           resources :comment
