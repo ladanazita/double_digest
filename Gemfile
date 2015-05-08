@@ -44,6 +44,9 @@ gem 'httparty', '0.11.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+
+# gems we want to run  in production
 group :production do
      gem 'rails_12factor'
      gem 'thin'
