@@ -23,7 +23,7 @@ class CommentsController < ApplicationController
 		redirect_to "index"
 	end
 
-	private
+private
 
 	def comments_params
 		params.require(:comment).permit(:body)
