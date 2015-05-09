@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>DoubleDigest</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>DoubleDigest</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <!-- Navbar goes here -->
 
-<%= yield %>
+    <!-- Page Layout here -->
+    <div class="row">
+      <div class="col s12 m4 l3">
+      <!-- left side navigation panel -->
+      </div>
+      <div class="col s12 m8 l9">
+      <!-- Teal page content  -->
+      </div>
 
-</body>
+    </div>
+  <%= yield %>
+
+  </body>
 </html>
