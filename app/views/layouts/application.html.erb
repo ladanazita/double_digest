@@ -8,16 +8,27 @@
   </head>
   <body>
     <!-- Navbar goes here -->
-
+    <nav>
+      <div class="nav-wrapper">
+        <div class="brand-logo center">Sway News</div>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <% if current_user %>
+            <li>Welcome <strong><%= current_user.name%></strong></li>
+            <li><%= link_to 'Sign out', signout_path %></li>
+          <%else%>
+          <li><%= link_to "Sign in with Twitter", "/auth/twitter" %></li>
+          <%end%>
+        </ul>
+      </div>
+    </nav>
     <!-- Page Layout here -->
     <div class="row">
       <div class="col s12 m4 l3">
       <!-- left side navigation panel -->
       </div>
       <div class="col s12 m8 l9">
-      <!-- Teal page content  -->
+      <!-- Video content -->
       </div>
-
     </div>
   <%= yield %>
 
