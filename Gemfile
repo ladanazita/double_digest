@@ -69,6 +69,7 @@ group :test do
   # makes it easy to programatically simulate your user's interactions with app
   gem 'capybara'
   # watches application and test and runs specs for us automatically when it detects changes
+  gem 'guard'
   gem 'guard-rspec'
   # opens default web browser upon failed integration specs to show what app is rendering
   gem 'launchy'
