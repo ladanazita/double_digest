@@ -1,6 +1,13 @@
 require 'rubygems'
 require 'factory_girl_rails'
+OmniAuth.config.test_mode = true
 
+  OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new({
+      :provider => 'twitter',
+      :uid => '123545'
+    })
+# Checks for pending migrations before tests are run.
+ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
