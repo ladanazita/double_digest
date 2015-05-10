@@ -11,13 +11,18 @@ RSpec.describe UsersController, type: :controller do
       expect(response).to have_http_status(:success)
     end
     it "assigns a new User to @user" do
+      expect(assigns(:user)).to be_a(User)
     end
-    it "renders the :new template"
+    it "doesn't save any new users" do
+      expect{get :new}.to change(User, :count).by(0)
+    end
   end
 
   describe "POST #create" do
     context "with valid attributes" do
-      it "saves the new user in the database"
+      it "saves the new user in the database" do
+        expect{post :create, user: valid_attributes}.to change(User, :count).by(1)
+      end
       it "redirects to the home page"
     end
     context "with invalid attributes" do
