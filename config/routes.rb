@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   # get 'trends/show'
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'session#destroy'
+
   root 'welcome#index'
     resources :user
       namespace :api do
