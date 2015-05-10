@@ -54,7 +54,7 @@ group :development, :test do
   # includes RSpec, makes it play nicely with rails
   gem 'rspec-rails'
   # replaces Rails' default fixtures for feeding test data to the test suite
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', "~> 4.0"
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
