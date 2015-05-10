@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
 	has_many :comments
   validates :name, uniqueness: {scope: :name}, presence: true
   validates :email, uniqueness: {scope: :email}, presence: true
+  validates :password_digest, presence: true
   #the omniauth is a method we have to create, and its referring to a class, so its a class method associated with our user. go into user.rb
   #we need to parse what we injected in the omniauth params and inject it into our database
   def self.from_omniauth(auth)

@@ -20,6 +20,8 @@ require 'rails_helper'
     user = create(:user, :email => "bob@aol.com")
     user1 = build(:user, :email => "bob@aol.com").should_not be_valid
   end
-  it "is invalid without a password"
+  it "is invalid without a password" do
+    FactoryGirl.build(:user, password_digest:nil).should_not be_valid
+  end
 
 end
