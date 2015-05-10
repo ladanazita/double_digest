@@ -59,11 +59,7 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-end
-# these gems are only used when we run our specs, so they aren't necessary when loading in development
-# this also ensures that gems used solely for generating code or running tests arent installed in production
-# environment when deployed to server
-group :test do
+
   # generates names, emails and placeholder for factory
   gem 'faker'
   # makes it easy to programatically simulate your user's interactions with app
