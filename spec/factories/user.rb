@@ -6,5 +6,7 @@ FactoryGirl.define do
     f.email {Faker::Internet.email}
     f.password_digest {Faker::Internet.password}
   end
+  factory :invalid_user, parent: :user do |f|
+    f.name nil
 end
 
