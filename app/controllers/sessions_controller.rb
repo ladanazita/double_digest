@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+
+
   # removing twitter oauth for now
   # def twitter_sign_in
   #   auth = request.env["omniauth.auth"]
