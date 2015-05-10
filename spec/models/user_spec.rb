@@ -8,7 +8,13 @@ require 'rails_helper'
   it "is invalid without a name" do
     FactoryGirl.build(:user, name: nil).should_not be_valid
   end
+  it "does not allow duplicate name per user" do
+    user = create(:user, :name => "BortSampson")
+    user1= build(:user, :name => "BortSampson").should_not be_valid
+  end
+
   it "is invalid without an email"
   it "is invalid without a password"
   it "returns a user's full name as a string"
+
 end
