@@ -2,9 +2,19 @@ require 'rails_helper'
 
 RSpec.describe UsersController, type: :controller do
   describe "GET #new" do
-    it "assigns a new User to @user"
+
+    before(:each){
+      get :new
+    }
+
+    it "returns http success" do
+      expect(response).to have_http_status(:success)
+    end
+    it "assigns a new User to @user" do
+    end
     it "renders the :new template"
   end
+
   describe "POST #create" do
     context "with valid attributes" do
       it "saves the new user in the database"
@@ -15,4 +25,5 @@ RSpec.describe UsersController, type: :controller do
       it "re-renders the :new template"
       end
     end
+
 end
