@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   # get 'trends/index'
   # get 'trends/show'
   get '/signup' => 'users#new'
+  post '/signup' => 'users#create'
   post '/users' => 'users#create'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
