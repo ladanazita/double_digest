@@ -9,7 +9,7 @@ RSpec.configure do |config|
 
   # help with factory girl
   config.include FactoryGirl::Syntax::Methods
-
+  FactoryGirl.factories.clear
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
