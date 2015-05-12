@@ -35,6 +35,8 @@ gem 'bootstrap-sass', '~> 3.3.4'
 gem 'figaro'
 
 gem 'twitter'
+gem 'sidekiq'
+gem 'redis'
 
 gem 'httparty', '0.11.0'
 
