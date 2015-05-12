@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'welcome#index'
   # get 'trends/index'
   # get 'trends/show'
   get '/signup' => 'users#new'
@@ -8,7 +9,7 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'session#destroy'
 
-  root 'welcome#index'
+
     resources :user
       namespace :api do
         resources :trends
