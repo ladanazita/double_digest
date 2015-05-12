@@ -12,8 +12,19 @@ module Api
  	end
 
  	def new
- 		@tweets = $twitter.home_timeline[0..200]
+ 		@trend = Trend.new
  	end
 
+ 	def create
+ 		@tweets = $twitter.home_timeline[0..200]
+ 			@tweets.each do |t|
+ 				@trend = Trend.new
+ 			t.hashtags.each do |h|
+ 				@trend.hashtags = h.text
+ 				@trend.save 
+ 			end
+ 		end
+
 	end
+end
 end
