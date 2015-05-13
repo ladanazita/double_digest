@@ -5,7 +5,6 @@ require 'omniauth-twitter'
 
 RSpec.configure do |config|
 
-  config.include(OmniauthMacros)
 
   # help with factory girl
   config.include FactoryGirl::Syntax::Methods
@@ -34,5 +33,3 @@ RSpec.configure do |config|
   end
 
 end
-
-OmniAuth.config.test_mode = true
