@@ -29,6 +29,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # background worker
 gem 'redis'
 gem 'sidekiq'
+gem 'sidetiq'
 
 # our styling
 gem 'materialize-sass'

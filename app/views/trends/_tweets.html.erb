@@ -1,6 +1,6 @@
 <section id="tweets">
   <ul>
-    <% @tweets.each do |tweet| %>
+    <% load_tweets.each do |tweet| %>
     	<% tweet.hashtags.each do |t| %>
       		<li><%= link_to t.text, "https://www.twitter.com/#{tweet.user.screen_name}" %></li>
       	<% end %>
