@@ -26,6 +26,10 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# background worker
+gem 'redis'
+gem 'sidekiq'
+
 # our styling
 gem 'materialize-sass'
 
