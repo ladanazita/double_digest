@@ -1,7 +1,7 @@
 
 var vidHeight = 400;
 var vidWitdh = 400;
-var results = 10;
+var results = 1;
 
 
 $(document).ready(function(){
