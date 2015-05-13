@@ -1,31 +1,29 @@
 <div class="row">
   <div class = "container">
-    <form class="col s12">
-      <%= form_tag('/signup', method: :post) do %>
-        <div class="row">
-          <div class="input-field col s12">
-            <%= text_field_tag :name, nil, class: "validate" %>
-            <label for="first name">Username</label>
-          </div>
+    <%= form_tag('/signup', method: :post, :class => 'col s12') do %>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= text_field_tag :name,nil,class: "validate" %>
+          <label for="first name">Username</label>
         </div>
+      </div>
 
-        <div class="row">
-          <div class="input-field col s12">
-            <%= text_field_tag :email, nil, class: "validate" %>
-            <label for="email">Email</label>
-          </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= text_field_tag :email,nil, class: "validate" %>
+          <label for="email">Email</label>
         </div>
+      </div>
 
-        <div class="row">
-          <div class="input-field col s12">
-            <%= password_field_tag :password, nil, class: "validate" %>
-            <label for="password">Password</label>
-          </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= password_field_tag :password,nil, class: "validate" %>
+          <label for="password">Password</label>
         </div>
-        <button class="btn-floating btn-large waves-effect waves-light red">
-          <i class="mdi-content-add"><%= submit_tag%></i>
-        </button>
-      <% end %>
-    </form>
+      </div>
+      <button class="btn-floating btn-large waves-effect waves-light red">
+        <%= submit_tag%> Submit
+      </button>
+    <% end %>
   </div>
 </div>

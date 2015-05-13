@@ -1,4 +1,5 @@
-#spec/factories/users.rb
+require 'Faker'
+require 'factory_girl_rails'
 
 FactoryGirl.define do
   factory :user do |f|
