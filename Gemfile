@@ -29,10 +29,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # our styling
 gem 'materialize-sass'
 
-# for login
-gem 'omniauth'
-gem 'omniauth-twitter'
-
 # gems to help consume twitter API
 gem 'twitter'
 gem 'httparty', '0.11.0'

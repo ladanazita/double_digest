@@ -1,7 +1,5 @@
 require 'rubygems'
 require 'factory_girl_rails'
-require 'support/omniauth_macros'
-require 'omniauth-twitter'
 
 RSpec.configure do |config|
 
