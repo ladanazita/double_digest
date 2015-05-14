@@ -12,4 +12,5 @@ class ApplicationController < ActionController::Base
       return nil
     end
   end
+
 end
