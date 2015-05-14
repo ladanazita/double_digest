@@ -3,13 +3,13 @@ class SessionsController < ApplicationController
     @user
   end
   def create
-    user=User.find_by_email(params[:email])
-    if user && user.authenticate(params[:password])
+    user=User.find_by_email(params[:session][:email])
+    if user && user.authenticate(params[:session][:password])
       session[:user_id]=user.id
       redirect_to('/')
     else
       flash[:alert] = "Incorrect email or password"
-      redirect_to('/login')
+      render 'new'
     end
   end
   def destroy

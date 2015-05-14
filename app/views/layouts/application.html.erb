@@ -17,7 +17,7 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <% if current_user %>
             <li>Welcome <strong><%= current_user.name%></strong></li>
-            <li><%= link_to 'Sign out', signout_path %></li>
+            <li><%= link_to 'Signout', signout_path %></li>
           <%else%>
             <li><%= link_to "Sign in", login_path %></li> or
             <li><%= link_to "Sign Up", '/signup'%></li>

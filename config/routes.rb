@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/id' => 'users#show'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
-  get '/signout' => 'session#destroy'
+  destroy '/signout' => 'session#destroy'
 
 
     resources :user
