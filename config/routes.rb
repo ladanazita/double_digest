@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'application#index'
+  root 'welcome#index'
   # get 'trends/index'
   # get 'trends/show'
   get '/signup' => 'users#new'
