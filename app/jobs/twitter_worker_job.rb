@@ -4,7 +4,7 @@ class TwitterWorkerJob < ActiveJob::Base
   include Sidetiq::Schedulable
   include ApplicationHelper
 
-  recurrence { hourly(4) }
+  recurrence { hourly(2) }
 
   def perform
     tweets = load_tweets
