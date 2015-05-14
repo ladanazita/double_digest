@@ -3,15 +3,13 @@ Rails.application.routes.draw do
   # get 'trends/index'
   # get 'trends/show'
   get '/signup' => 'users#new'
-  post '/signup' => 'users#create'
   post '/users' => 'users#create'
-  get '/id' => 'users#show'
+  post '/users/:id' => 'users#show', as: :user
+
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
-  get '/logout' => 'session#destroy'
+  get '/signout' => 'sessions#destroy'
 
-
-    resources :user
       namespace :api do
         resources :trends
           resources :video
