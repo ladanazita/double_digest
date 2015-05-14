@@ -4,5 +4,4 @@ class WelcomeController < ApplicationController
   def index
     @trends = Trend.last(15)
   end
-
 end
