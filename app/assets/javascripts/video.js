@@ -27,7 +27,7 @@ $(document).ready(function(){
 						videTitle = item.snippet.title;
 						videoId = item.id.videoId;
 
-						output = '<li><iframe height ="'+vidHeight+'" width= "'+vidWitdh+'" src=\"//www.youtube.com/embed/'+videoId+'\"</iframe></li>';
+						output = '<li><iframe src=\"//www.youtube.com/embed/'+videoId+'\" frameborder="0" allowfullscreen</iframe></li>';
 
 						//Append to results listStytleType
 						$('#results').append(output);

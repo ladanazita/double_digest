@@ -1,3 +1,71 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h2 {
+	font-weight: 460;
+	font-size: 36px;
+	margin: 0;
+}
+
+.main_content {
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: .8;
+	padding-top: 25px;
+}
+
+.vid-title {
+	margin: 0;
+	background-color: orange;
+	text-align: center;
+}
+
+.embed-container-l {
+position: relative;
+padding-bottom: 56.25%; /* 16/9 ratio */
+padding-top: 30px; /* IE6 workaround*/
+height: 0;
+overflow: hidden;
+top: 0;
+left: 0;
+}
+
+.embed-container-l iframe,
+.embed-container-l object,
+.embed-container-l embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+.embed-container-r {
+position: relative;
+padding-bottom: 56.25%; /* 16/9 ratio */
+padding-top: 30px; /* IE6 workaround*/
+height: 0;
+overflow: hidden;
+bottom: 0;
+right: 0;
+}
+
+.embed-container-r iframe,
+.embed-container-r object,
+.embed-container-r embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+.comments-box {
+	margin: 0 auto;
+	height: 200px;
+	width: 700px;
+	background-color: white;
+	border: 5px solid red;
+}
