@@ -23,8 +23,9 @@
         <li><%= link_to 'Signout', signout_path %></li>
 
         <%else%>
-        <li><%= link_to "Sign in", login_path %></li>
-        <li><%= link_to "Sign Up", '/signup'%></li>
+        <!-- SIGNUP MODAL BUTTON-->
+        <a class="waves-effect waves-light btn modal-trigger" href="#Signup">Sign Up</a>
+
         <%end%>
       </ul>
 
@@ -34,6 +35,8 @@
   <!-- PAGE LAYOUT -->
   <div class="row">
     <div class="col s12 m4 l3"></div>
+
+     
 
     <!-- VIDEO LAYOUT -->
     <div class="row">
