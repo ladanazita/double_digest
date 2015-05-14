@@ -6,12 +6,12 @@ class TwitterWorkerJob < ActiveJob::Base
 
   recurrence { hourly(4) }
 
-  # def perform
-  #   tweets = load_tweets
-  #   tweets.each do |t|
-  #     t.hashtags.each do |h| 
-  #       Trend.create(hashtags: h.text, created_at: Time.now)
-  #     end
-  #   end
-  # end 
+  def perform
+    tweets = load_tweets
+    tweets.each do |t|
+      t.hashtags.each do |h| 
+        Trend.create(hashtags: h.text, created_at: Time.now)
+      end
+    end
+  end 
 end
