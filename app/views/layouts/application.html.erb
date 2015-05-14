@@ -1,76 +1,60 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <title>DoubleDigest</title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-    <%= debug(params) if Rails.env.development? %>
-  </head>
+<head>
+  <title>DoubleDigest</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <%= debug(params) if Rails.env.development? %>
+</head>
 
-  <body>
-    <!-- Navbar -->
-    <nav>
-      <div class="nav-wrapper">
-        <div class="brand-logo center">Sway News</div>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <% if current_user %>
-            <li>Welcome <strong><%= current_user.name%></strong></li>
-            <li><%= link_to 'Signout', signout_path %></li>
-          <%else%>
-            <li><%= link_to "Sign in", login_path %></li>
-            <li><%= link_to "Sign Up", '/signup'%></li>
-          <%end%>
-        </ul>
-      </div>
-    </nav>
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-wrapper">
 
-  <!-- Page Layout here -->
-    <div class="row">
-      <!-- left side navigation panel this will be trends -->
-      <div class="col s12 m4 l3">
-      </div>
-
-      <!-- testing for word search via youtube API -->
-      <div class='row'>
-      <ul>
-        <li>apple</li>
-        <li>booty</li>
-        <li>war</li>
-        <li>isis</li>
+      <!-- TRENDS SIDEBAR -->
+      <ul id="slide-out" class="side-nav">
+        <% @trends.each do |tweet| %>
+        <li><a href="#!"><%= tweet.hashtags %></a></li>
+        <% end %>
       </ul>
-      </div>
+      <a href="#" data-activates="slide-out" class="button-collapse show-on-large">
+        <i class="mdi-navigation-menu"></i>
+      </a>
+
+      <!-- LOGO -->
+      <div class="brand-logo center">Sway News</div>
+
+      <!-- SIGNUP + SIGNIN -->
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <% if current_user %>
+
+        <li>Welcome <strong><%= current_user.name%></strong></li>
+        <li><%= link_to 'Signout', signout_path %></li>
+
+        <%else%>
+        <li><%= link_to "Sign in", login_path %></li>
+        <li><%= link_to "Sign Up", '/signup'%></li>
+        <%end%>
+      </ul>
+
+    </div>
+  </nav>
 
 
-<nav>
-  <ul id="slide-out" class="side-nav">
-    <li><a href="#!">First Sidebar Link</a></li>
-    <li><a href="#!">Second Sidebar Link</a></li>
-  </ul>
-  <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
-</nav>
+  <!-- PAGE LAYOUT -->
+  <div class="row">
+    <div class="col s12 m4 l3"></div>
 
+    <!-- VIDEO LAYOUT -->
     <div class="row">
       <div class="col s6 m6 l6"> <div id="results"></div></div>
       <div class="col s6 m6 l6"><div id="foxresults"></div></div>
     </div>
-
-
-    <div class="row">
-      <div class="col s6 m6 l6"> <div id="results"></div></div>
-      <div class="col s6 m6 l6"><div id="foxresults"></div></div>
-    </div>
-
-      <!-- you tube videos -->
-      <div class="row">
-        <div class="col s6 m6 l6"> <div id="results"></div></div>
-        <div class="col s6 m6 l6"><div id="foxresults"></div></div>
-      </div>
-
-
-    </div>
-  <%= yield %>
-
-  </body>
+  </div>
+</div>
+<%= yield %>
+</body>
 </html>
