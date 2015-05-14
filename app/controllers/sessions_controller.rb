@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
       redirect_to('/')
     else
       flash[:error] = "Incorrect email or password"
-      render 'new'
+      render 'sessions/_new'
     end
   end
 
