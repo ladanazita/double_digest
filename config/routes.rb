@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'comments/body:string'
+
   root 'welcome#index'
   # get 'trends/index'
   # get 'trends/show'
