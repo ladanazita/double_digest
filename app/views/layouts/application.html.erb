@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>DoubleDigest</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -7,8 +8,9 @@
     <%= csrf_meta_tags %>
     <%= debug(params) if Rails.env.development? %>
   </head>
+
   <body>
-    <!-- Navbar goes here -->
+    <!-- Navbar -->
     <nav>
       <div class="nav-wrapper">
         <div class="brand-logo center">Sway News</div>
@@ -23,18 +25,23 @@
         </ul>
       </div>
     </nav>
-    <!-- Page Layout here -->
+
+  <!-- Page Layout here -->
     <div class="row">
+      <!-- left side navigation panel this will be trends -->
       <div class="col s12 m4 l3">
-      <!-- left side navigation panel -->
       </div>
 
+      <!-- testing for word search via youtube API -->
+      <div class='row'>
       <ul>
         <li>apple</li>
         <li>booty</li>
         <li>war</li>
         <li>isis</li>
       </ul>
+      </div>
+
 
 <nav>
   <ul id="slide-out" class="side-nav">
@@ -54,6 +61,13 @@
       <div class="col s6 m6 l6"> <div id="results"></div></div>
       <div class="col s6 m6 l6"><div id="foxresults"></div></div>
     </div>
+
+      <!-- you tube videos -->
+      <div class="row">
+        <div class="col s6 m6 l6"> <div id="results"></div></div>
+        <div class="col s6 m6 l6"><div id="foxresults"></div></div>
+      </div>
+
 
     </div>
   <%= yield %>
