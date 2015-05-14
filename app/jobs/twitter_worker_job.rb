@@ -5,7 +5,7 @@ class TwitterWorkerJob < ActiveJob::Base
   include ApplicationHelper
 
   # SETS UP THE TIME INTERVAL FOR SIDEKIQ + SIDETIQ
-  recurrence { hourly(2) }
+  recurrence { hourly(4) }
 
   # MY PERFORM ACTION FOR SAVING DATA FROM TWTIITERS API TO OUR DB
   def perform
