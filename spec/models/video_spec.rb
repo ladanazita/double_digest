@@ -9,7 +9,7 @@ require 'rails_helper'
   # let!(:invalid_url_video){ FactoryGirl.build(:invalid_url_video) }
 
   it "has a valid factory" do
-    expect(FactoryGirl.create(:video)).to be_valid
+    expect(FactoryGirl.create(:no_url_video)).to be_valid
   end
 
 end
