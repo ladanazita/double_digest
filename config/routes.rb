@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   post '/signup' => 'sessions#create'
   get '/signout' => 'sessions#destroy'
-  post '/comments' => "comments#create"
 
 
   namespace :api do

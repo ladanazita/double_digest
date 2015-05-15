@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
 
   def index
-    @trends = Trend.last(15)
+    @trends = Trend.all
   end
 
   def create
@@ -11,6 +11,9 @@ class CommentsController < ApplicationController
     @comment.user_id = current_user.id
     @comment.save
     redirect_to root_path
+  end
+
+  def show
   end
 
   private
