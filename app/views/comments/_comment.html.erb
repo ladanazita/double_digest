@@ -1,11 +1,19 @@
 <div class="container">
   <div class="comment-content">
+
     <h4>Comment:</h4>
+
     <p><%= comment.body %></p>
+
     <p><%= @user.name%></p>
-    <p><%= link_to 'Destroy Comment', [comment.trend, comment],
-        method: :delete,
-        data: { confirm: 'Are you sure?' } %>
-    </p>
+
+    <% if current_user %>
+
+      <p><%= link_to 'Destroy Comment', [comment.trend, comment],
+          method: :delete,
+          data: { confirm: 'Are you sure?' } %>
+      </p>
+    <% end %>
+
   </div>
 </div>
