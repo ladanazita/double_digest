@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   post '/signup' => 'sessions#create'
   get '/signout' => 'sessions#destroy'
+  post '/comments' => "comments#create"
 
 
   namespace :api do
@@ -22,8 +23,4 @@ Rails.application.routes.draw do
     end
   end
 
-
-  # match '/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
-  # match '/auth/failure', to: redirect('/'), via: [:get, :post]
-  # match '/signout', to: 'sessions#destroy', as:'signout', via: [:get, :post]
 
