@@ -11,15 +11,15 @@ Rails.application.routes.draw do
   post '/signup' => 'sessions#create'
   get '/signout' => 'sessions#destroy'
 
-
   namespace :api do
     namespace :v1 do
+    get 'search' => 'trends#search'
+
       resources :trends do
-        resources :videos
-          resources :comments
+        resources :videos do
+          resources :comment
         end
       end
     end
   end
-
-
+end

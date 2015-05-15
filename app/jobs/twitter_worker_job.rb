@@ -11,7 +11,7 @@ class TwitterWorkerJob < ActiveJob::Base
   def perform
     tweets = load_tweets
     tweets.each do |t|
-      t.hashtags.each do |h| 
+      t.hashtags.each do |h|
           Trend.create(hashtags: h.text, created_at: Time.now)
       end
     end
