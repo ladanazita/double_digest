@@ -32,6 +32,13 @@ $(document).ready(function(){
 						//Append to results listStytleType
 						$('#results').append(output);
 
+						$.post('/api/v1/trends/:trend_id/videos', {
+								"video": {
+									"url": videoId	
+							}
+						
+						});						
+
 					});
 				}
 		);
@@ -52,7 +59,13 @@ $(document).ready(function(){
 
 						//Append to results listStytleType
 						$('#foxresults').append(output);
-
+						$.post('/api/v1/trends/:trend_id/videos', {
+								"video": {
+									"url": videoId	
+							}
+						
+						});	
+						
 					});
 				}
 		);

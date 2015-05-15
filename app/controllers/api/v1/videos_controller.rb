@@ -1,4 +1,5 @@
-class VideosController < ApplicationController
+class Api::V1::VideosController < ApplicationController
+
 
 # GET /videos
   # GET /videos.json
@@ -16,7 +17,7 @@ class VideosController < ApplicationController
   # POST /videos
   # POST /videos.json
   def create
-    @video = video.new(video_params)
+    @video = Video.new(video_params)
 
     if @video.save
       render json: @video, status: :created, location: @video
@@ -56,5 +57,3 @@ class VideosController < ApplicationController
     end
 end
 
-
-end
