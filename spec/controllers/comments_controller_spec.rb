@@ -2,10 +2,12 @@ require 'rails_helper'
 
 RSpec.describe CommentsController, type: :controller do
 
-  describe "GET #body:string" do
-    it "returns http success" do
-      get :body:string
-      expect(response).to have_http_status(:success)
+  describe "POST create" do
+    it "creates a new comment with valid attribute" do
+      expect{
+        comment_attr = attributes_for(:comment)
+        post :create, comment: comment_attr
+      }.to change(Comment, :count).by(1)
     end
   end
 
