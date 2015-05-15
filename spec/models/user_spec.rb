@@ -1,7 +1,7 @@
 # spec/models/user.rb
 require 'rails_helper'
 
- describe User do
+describe User do
   it "has a valid factory" do
     FactoryGirl.create(:user).should be_valid
   end
@@ -24,4 +24,7 @@ require 'rails_helper'
     FactoryGirl.build(:user, password_digest:nil).should_not be_valid
   end
 
+  it "is valid when email format is valid" do
+    FactoryGirl.create(:user, :email=>"A_US-ER@f.b.org").should be_valid
+  end
 end
