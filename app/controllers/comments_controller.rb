@@ -1,7 +1,12 @@
 class CommentsController < ApplicationController
 
+  def index
+    @trends = Trend.last(15)
+  end
+
   def create
-    @trend = Trend.find(params[:trend_id])
+    puts params
+    @trends = Trend.find(params[:trend_id])
     @comment = @trend.comments.new(comment_params)
     @comment.user_id = current_user.id
     @comment.save
