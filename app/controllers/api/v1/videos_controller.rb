@@ -4,7 +4,9 @@ class Api::V1::VideosController < ApplicationController
 # GET /videos
   # GET /videos.json
   def index
-    @videos = Video.all
+
+    @videos = Video.find_by_trend_id(params[:trend_id])
+    # @videos = Video.all
 
     render json: @videos , root: false
   end
@@ -13,13 +15,15 @@ class Api::V1::VideosController < ApplicationController
   # GET /videos/1.json
   def show
     render json: @video
+    # render json: params
   end
   # POST /videos
   # POST /videos.json
   def create
-    @video = Video.new(video_params)
+    trend = Trend.find(params[:trend_id])
+    
 
-    if @video.save
+    if trend.videos.create(video_params)
       render json: @video, status: :created, location: @video
     else
       render json: @video.errors, status: :unprocessable_entity
