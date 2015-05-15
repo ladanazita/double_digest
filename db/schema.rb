@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150507205738) do
+ActiveRecord::Schema.define(version: 20150514222615) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,14 +20,12 @@ ActiveRecord::Schema.define(version: 20150507205738) do
     t.string   "body"
     t.integer  "trend_id"
     t.integer  "user_id"
-    t.integer  "video_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   add_index "comments", ["trend_id"], name: "index_comments_on_trend_id", using: :btree
   add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
-  add_index "comments", ["video_id"], name: "index_comments_on_video_id", using: :btree
 
   create_table "trends", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -62,6 +60,5 @@ ActiveRecord::Schema.define(version: 20150507205738) do
 
   add_foreign_key "comments", "trends"
   add_foreign_key "comments", "users"
-  add_foreign_key "comments", "videos"
   add_foreign_key "videos", "trends"
 end
