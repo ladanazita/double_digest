@@ -2,32 +2,26 @@
 var vidHeight = 400;
 var vidWitdh = 400;
 var results = 1;
+var youtubeLink = "www.youtube.com/embed/";
 
 
 $(document).ready(function(){
 
 
 
-  $("li").bind("click", function(){
+  $(".trendsclick").bind("click", function(){
     var keyWord = $(this).text();
     $( "#results" ).empty();
     $( "#foxresults" ).empty();
-    console.log(keyWord);
     var trendId;
     var url = "api/v1/search" + "?hashtags=" + keyWord;
 
     function handleResponse(data,status) {
       for(var i =0; i < data.length; i++) {
         trendId = data[i].id;
-        console.log(trendId);
-        $.get('/api/v1/trends/' + trendId + '/videos', function(data) {
-          console.log(data);
-        })
+        $.get('/api/v1/trends/' + trendId + '/videos');
       }
     }
-
-
-    // $.get(url, handleResponse);
 
     $.when($.get(url, handleResponse)).then(function(){
       $.get(
@@ -50,7 +44,7 @@ $(document).ready(function(){
 
             $.post('/api/v1/trends/' + trendId + '/videos', {
               "video": {
-                "url": videoId
+                "url": youtubeLink.concat(videoId)
               }
 
             });           
@@ -77,7 +71,7 @@ $(document).ready(function(){
             $('#foxresults').append(output);
             $.post('/api/v1/trends/' + trendId + '/videos', {
               "video": {
-                "url": videoId,
+                "url": youtubeLink.concat(videoId)
               }
 
             }); 
