@@ -15,9 +15,8 @@ Rails.application.routes.draw do
     namespace :v1 do
     get 'search' => 'trends#search'
       resources :trends do
-        resources :videos do
-          resources :comment
-        end
+        resources :videos
+        resources :comments
       end
     end
   end
