@@ -16,9 +16,8 @@ Rails.application.routes.draw do
     get 'search' => 'trends#search'
 
       resources :trends do
-        resources :videos do
-          resources :comment
-        end
+        resources :videos
+          resources :comments
       end
     end
   end

@@ -1,19 +1,16 @@
-class CommentsController < ApplicationController
+class Api::V1::CommentsController < ApplicationController
 
   def index
-    @trends = Trend.all
+     @comments = Comment.find_by_trend_id(params[:trend_id])
+     render json: @comments
   end
 
   def create
-    puts params
-    @trends = Trend.find(params[:trend_id])
+    @trend = Trend.find(params[:trend_id])
     @comment = @trend.comments.new(comment_params)
     @comment.user_id = current_user.id
     @comment.save
     redirect_to root_path
-  end
-
-  def show
   end
 
   private
