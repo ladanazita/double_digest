@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
       resources :trends do
         resources :videos
-          resources :comments
+        resources :comments
       end
     end
   end
