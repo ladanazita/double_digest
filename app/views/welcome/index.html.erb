@@ -1,6 +1,6 @@
 <!-- NAVBAR -->
 <nav>
-  <div class="nav-wrapper">
+  <div class="nav-wrapper red accent-4">
 
     <!-- TRENDS SIDEBAR -->
     <ul id="slide-out" class="side-nav">
@@ -18,15 +18,19 @@
     <!-- SIGNUP + SIGNIN -->
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <% if current_user %>
-        <li>Welcome <strong><%= current_user.name%></strong></li>
-        <li><%= link_to 'Signout', signout_path %></li>
+      <li>Welcome <strong><%= current_user.name%></strong></li>
+      <li><%= link_to 'Signout', signout_path %></li>
       <%else%>
-        <!-- SIGN IN WITH FACEBOOK (unstyled)-->
-        <li><%= link_to "Sign in with Facebook", "/auth/facebook" %>Sign in with Facebook</li>
-        <!-- SIGNUP MODAL BUTTON-->
-        <a class="waves-effect waves-light btn modal-trigger" href="#Signup">Sign Up</a>
-        <!-- SIGNIN MODAL BUTTON-->
-        <a class="waves-effect waves-light btn modal-trigger" href="#Signin">Sign In</a>
+
+      <!-- SIGN IN WITH FACEBOOK (unstyled)-->
+      <li><%= link_to "Sign in with Facebook", "/auth/facebook" %>Sign in with Facebook</li>
+
+      <!-- SIGNUP MODAL BUTTON-->
+      <a class="waves-effect waves-light btn modal-trigger white" href="#Signup" id="navbuttons1">Sign Up</a>
+
+      <!-- SIGNIN MODAL BUTTON-->
+      <a class="waves-effect waves-light btn modal-trigger white" href="#Signin" id="navbuttons2">Sign In</a>
+
       <%end%>
     </ul>
 
@@ -40,9 +44,24 @@
 
 
   <!-- VIDEO LAYOUT -->
-  <div class="row">
-    <div class="col s6 m6 l6"> <div id="results"></div></div>
-    <div class="col s6 m6 l6"><div id="foxresults"></div></div>
+<div class="row col-l-12 vid-title">
+</div> <!-- end of div vid-title -->
+
+<div class="main_content" id="index-banner">
+
+  <div class="container">
+
+    <div class="vidcontentl">
+    <div class="embed-container-l" id="results"></div>
+      
+
+       </div>
+
+      <div class="embed-container-r" id="foxresults"></div>
+    
+
   </div>
+</div>
+
 </div>
 </div>
