@@ -1,7 +1,7 @@
 class Video < ActiveRecord::Base
   belongs_to :trend
 
-  # MAKES SURE ALL URL'S THAT ARE STORED ARE UNIQUE
-  validates :url, uniqueness: true
- 
+  # VALIDATES URL UNIQUENESS, AVOID DUPLICATOIN
+  validates :url, uniqueness: {scope: :url}, presence: true
+
 end
