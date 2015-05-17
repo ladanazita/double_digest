@@ -13,7 +13,7 @@
     </a>
 
     <!-- LOGO -->
-    <div class="brand-logo center">Sway News</div>
+    <div class="brand-logo center" id="swaylogo">Sway News</div>
 
     <!-- SIGNUP + SIGNIN -->
     <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -22,14 +22,14 @@
       <li><%= link_to 'Signout', signout_path %></li>
       <%else%>
 
-      <!-- SIGN IN WITH FACEBOOK (unstyled)-->
-      <li><%= link_to "Sign in with Facebook", "/auth/facebook" %>Sign in with Facebook</li>
+      <!-- SIGN IN WITH FACEBOOK -->
+      <a class="waves-effect waves-light btn blue"<%= link_to "Sign in with Facebook", "/auth/facebook" %></a>
 
-      <!-- SIGNUP MODAL BUTTON-->
-      <a class="waves-effect waves-light btn modal-trigger white" href="#Signup" id="navbuttons1">Sign Up</a>
+      <!-- SIGNUP MODAL BUTTON -->
+      <a class="waves-effect waves-light btn modal-trigger blue" href="#Signup" id="navbuttons1">Sign Up</a>
 
       <!-- SIGNIN MODAL BUTTON-->
-      <a class="waves-effect waves-light btn modal-trigger white" href="#Signin" id="navbuttons2">Sign In</a>
+      <a class="waves-effect waves-light btn modal-trigger blue" href="#Signin" id="navbuttons2">Sign In</a>
 
       <%end%>
     </ul>
@@ -39,29 +39,12 @@
 
 <!-- PAGE LAYOUT -->
 <div class="row">
-  <div class="col s12 m4 l3"></div>
-
-
-
-  <!-- VIDEO LAYOUT -->
-<div class="row col-l-12 vid-title">
-</div> <!-- end of div vid-title -->
-
-<div class="main_content" id="index-banner">
-
-  <div class="container">
-
-    <div class="vidcontentl">
+  <div class="col s6 m6 l6">
     <div class="embed-container-l" id="results"></div>
-      
-
-       </div>
-
-      <div class="embed-container-r" id="foxresults"></div>
-    
-
+  </div>
+  <div class="col s6 m6 l6">
+    <div class="embed-container-l" id="foxresults"></div>
   </div>
 </div>
-
 </div>
 </div>
