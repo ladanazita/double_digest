@@ -9,4 +9,9 @@ describe Video do
     FactoryGirl.build(:video, url: nil).should_not be_valid
   end
 
+  it "does not allow duplicate url" do
+    video = create(:video, :url => "https://www.youtube.com/watch?v=qQDuKy4ZC5Y")
+    video1 = build(:video, :url => "https://www.youtube.com/watch?v=qQDuKy4ZC5Y").should_not be_valid
+  end
+
 end
