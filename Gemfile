@@ -42,6 +42,10 @@ gem 'httparty', '0.11.0'
 gem 'bcrypt', '~> 3.1.7'
 gem 'figaro'
 
+# Facebook login
+gem 'omniauth'
+gem 'omniauth-facebook'
+
 group :production do
      gem 'rails_12factor'
      gem 'thin'
@@ -52,7 +56,7 @@ group :development, :test do
   gem 'byebug'
 
   gem 'pry-rails'
-  
+
   # for pretty errors
   gem 'better_errors'
   # includes RSpec, makes it play nicely with rails
