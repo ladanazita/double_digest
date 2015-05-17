@@ -22,8 +22,4 @@ class SessionsController < ApplicationController
      redirect_to root_url
   end
 
-  def fb_destroy
-     session[:user_id] = nil
-  end
-
 end
