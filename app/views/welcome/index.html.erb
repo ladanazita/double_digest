@@ -21,7 +21,7 @@
         <li>Welcome <strong><%= current_user.name%></strong></li>
         <li><%= link_to 'Signout', signout_path %></li>
       <%else%>
-        <!-- SIGN IN WITH FACEBOOK -->
+        <!-- SIGN IN WITH FACEBOOK (unstyled)-->
         <li><%= link_to "Sign in with Facebook", "/auth/facebook" %></li>
         <!-- SIGNUP MODAL BUTTON-->
         <a class="waves-effect waves-light btn modal-trigger" href="#Signup">Sign Up</a>
