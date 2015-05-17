@@ -4,6 +4,7 @@
 
     <!-- TRENDS SIDEBAR -->
     <ul id="slide-out" class="side-nav">
+      <li class="topictext">TOPICS</li>
       <% @trends.each do |tweet| %>
       <li class="trendsclick"><a href="#!"><%= tweet.hashtags %></a></li>
       <% end %>
@@ -11,6 +12,7 @@
     <a href="#" data-activates="slide-out" class="button-collapse show-on-large">
       <i class="mdi-navigation-menu"></i>
     </a>
+
 
     <!-- LOGO -->
     <div class="brand-logo center" id="swaylogo">Sway News</div>
@@ -37,10 +39,14 @@
 <!-- PAGE LAYOUT -->
 <div class="row">
   <div class="col s6 m6 l6">
-    <div class="embed-container-l" id="results"></div>
+    <div class="video frame">
+      <div class="embed-container-l" id="results"></div>
+    </div>
   </div>
   <div class="col s6 m6 l6">
-    <div class="embed-container-l" id="foxresults"></div>
+    <div class="video frame">
+      <div class="embed-container-l" id="foxresults"></div>
+    </div>
   </div>
 </div>
 </div>
