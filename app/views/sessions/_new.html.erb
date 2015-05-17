@@ -3,7 +3,7 @@ r
 
 <div id="Signin" class="modal">
   <div class="modal-content">
-    <h4 id="modalHeaders">Welcome Back</h4>
+    <h4 id="swaylogo">Welcome Back</h4>
     <div class="row">
       <div class="container">
 
@@ -30,9 +30,12 @@ r
     </div>  
   </div>
   <div class="modal-footer">
-    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <button class="btn waves-effect waves-light blue" type="submit" name="action">Submit
       <i class="mdi-content-send right"></i>
     </button>
+
+    <!-- SIGN IN WITH FACEBOOK -->
+    <a class="waves-effect waves-light btn blue" id="navbuttonsfb"<%= link_to "Sign in with Facebook", "/auth/facebook" %></a>
     <%end%>
   </div>
 </div>
