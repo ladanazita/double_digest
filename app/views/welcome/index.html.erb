@@ -22,7 +22,7 @@
       <% if current_user %>
       <li>Welcome <strong><%= current_user.name%></strong></li>
       <li><%= link_to 'Signout', signout_path %></li>
-      <%else%>
+      <% else %>
 
       <!-- SIGNUP MODAL BUTTON -->
       <a class="waves-effect waves-light btn modal-trigger blue" href="#Signup" id="navbuttons">Sign Up</a>
@@ -30,7 +30,7 @@
       <!-- SIGNIN MODAL BUTTON-->
       <a class="waves-effect waves-light btn modal-trigger blue" href="#Signin" id="navbuttons2">Sign In</a>
 
-      <%end%>
+      <% end %>
     </ul>
 
   </div>
