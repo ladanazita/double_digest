@@ -1,9 +1,18 @@
 @import "materialize";
 
+
+
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  background-image: url('background.jpg');
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+}
+
+#fade-content, #fade-in { 
+  display: none; 
 }
 
 main {
@@ -11,6 +20,7 @@ main {
 }
 
 #navbuttons {
+
 }
 
 #navbuttons2 {
@@ -31,10 +41,13 @@ main {
 #swaylogo {
   font-family: 'Permanent Marker', cursive;
   font-size: 50px;
+  text-shadow: 5px 5px 5px #000000;
+
 }
 
 #swaylogofoot {
   font-family: 'Permanent Marker', cursive;
+  text-shadow: 5px 5px 5px #000000;
 }
 
 .topictext {
@@ -42,7 +55,8 @@ main {
   font-size: 30px;
   text-align: center;
   text-decoration: underline;
-  color: #d50000;
+  color: #FFF;
+  text-shadow: 5px 5px 5px #000000;
 }
 
 #videoviews {
@@ -50,6 +64,7 @@ main {
 }
 
 .videoframe {
+  
   text-align: center;
   margin-left: 90px;
   height: 350px;
@@ -59,17 +74,33 @@ main {
   box-shadow: inset -1px 0px 18px 4px rgba(0,0,0,0.42);
 }
 
-#newslogo {
-  text-align: center;
+
+.newslogo {
+  
   margin: 0 auto;
+  height: 69px;
+  width: 200px;
+  margin-top: 20px;
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
 }
 
+#newsLogoCNN {
+  background-image: url('Cnn.png');
+}
 
+#newsLogoFox {
+  background-image: url('fox-logo.png');
 
+}
 
-
-
-
+.trendsclick {
+  border: 2px solid black;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.5em;
+  cursor: pointer; 
+  cursor: hand;
+}
 
 
 
