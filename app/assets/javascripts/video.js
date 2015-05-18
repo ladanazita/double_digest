@@ -1,6 +1,6 @@
 
-var vidHeight = 400;
-var vidWitdh = 400;
+var vidHeight = 320;
+var vidWitdh = 500;
 var results = 1;
 var youtubeLink = "www.youtube.com/embed/";
 

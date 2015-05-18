@@ -1,1 +1,76 @@
 @import "materialize";
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+#navbuttons {
+}
+
+#navbuttons2 {
+  margin-right: 5px !important;
+}
+
+#navbuttonsfb {
+  margin-right: 5px !important;
+  margin-left: 5px !important;
+}
+
+#results, #foxresults {
+  margin-top: 60px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+#swaylogo {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 50px;
+}
+
+#swaylogofoot {
+  font-family: 'Permanent Marker', cursive;
+}
+
+.topictext {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: underline;
+  color: #d50000;
+}
+
+#videoviews {
+  text-align: center;
+}
+
+.videoframe {
+  text-align: center;
+  margin-left: 90px;
+  height: 350px;
+  width: 530px;
+  -webkit-box-shadow: inset -1px 0px 18px 4px rgba(0,0,0,0.42);
+  -moz-box-shadow: inset -1px 0px 18px 4px rgba(0,0,0,0.42);
+  box-shadow: inset -1px 0px 18px 4px rgba(0,0,0,0.42);
+}
+
+#newslogo {
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
