@@ -44,7 +44,28 @@ main {
   font-family: 'Permanent Marker', cursive;
   font-size: 50px;
   text-shadow: 5px 5px 5px #000000;
+    -webkit-animation-name: swing; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    animation-name: swing;
+    animation-duration: 6s;
 
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes swing {
+    0%   {left:500px; top:0px;}
+    25%  {left:1000px; top:0px;}
+    50%  {left:500px; top:0px;}
+    75%  {left:1000px; top:0px;}
+    100% {left:700px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes swing {
+    0%   {left:0px; top:0px;}
+    25%  {left:200px; top:0px;}
+    50%  {left:200px; top:200px;}
+    75%  {left:0px; top:200px;}
+    100% {left:0px; top:0px;}
 }
 
 #swaylogofoot {
@@ -104,6 +125,10 @@ main {
   cursor: pointer; 
   cursor: hand;
 }
+
+
+
+
 
 
 
