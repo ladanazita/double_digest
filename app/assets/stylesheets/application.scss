@@ -25,6 +25,7 @@ main {
 #results, #foxresults {
   margin-top: 60px;
   text-align: center;
+  padding-top: 15px;
 }
 
 #swaylogo {
@@ -43,3 +44,33 @@ main {
   text-decoration: underline;
   color: #d50000;
 }
+
+#videoviews {
+  text-align: center;
+}
+
+.videoframe {
+  text-align: center;
+  margin-left: 90px;
+  height: 350px;
+  width: 530px;
+  -webkit-box-shadow: inset -1px 0px 18px 4px rgba(0,0,0,0.42);
+  -moz-box-shadow: inset -1px 0px 18px 4px rgba(0,0,0,0.42);
+  box-shadow: inset -1px 0px 18px 4px rgba(0,0,0,0.42);
+}
+
+#newslogo {
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
