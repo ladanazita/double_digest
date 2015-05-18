@@ -1,16 +1,28 @@
 @import "materialize";
 
+
+
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  background-image: url('background.jpg');
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+}
+
+#fade-content, #fade-in { 
+  display: none; 
 }
 
 main {
   flex: 1 0 auto;
 }
 
+
+
 #navbuttons {
+
 }
 
 #navbuttons2 {
@@ -31,10 +43,34 @@ main {
 #swaylogo {
   font-family: 'Permanent Marker', cursive;
   font-size: 50px;
+  text-shadow: 5px 5px 5px #000000;
+    -webkit-animation-name: swing; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 7s; /* Chrome, Safari, Opera */
+    animation-name: swing;
+    animation-duration: 7s;
+
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes swing {
+    0%   {left:390px; top:0px;}
+    25%  {left:1000px; top:0px;}
+    50%  {left:390px; top:0px;}
+    75%  {left:1000px; top:0px;}
+    100% {left:700px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes swing {
+    0%   {left:0px; top:0px;}
+    25%  {left:200px; top:0px;}
+    50%  {left:200px; top:200px;}
+    75%  {left:0px; top:200px;}
+    100% {left:0px; top:0px;}
 }
 
 #swaylogofoot {
   font-family: 'Permanent Marker', cursive;
+  text-shadow: 5px 5px 5px #000000;
 }
 
 .topictext {
@@ -42,7 +78,8 @@ main {
   font-size: 30px;
   text-align: center;
   text-decoration: underline;
-  color: #d50000;
+  color: #FFF;
+  text-shadow: 5px 5px 5px #000000;
 }
 
 #videoviews {
@@ -50,6 +87,7 @@ main {
 }
 
 .videoframe {
+  
   text-align: center;
   margin-left: 90px;
   height: 350px;
@@ -59,13 +97,34 @@ main {
   box-shadow: inset -1px 0px 18px 4px rgba(0,0,0,0.42);
 }
 
-#newslogo {
-  text-align: center;
+
+.newslogo {
+  
   margin: 0 auto;
+  height: 69px;
+  width: 200px;
+  margin-top: 20px;
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
 }
 
+#newsLogoCNN {
+  background-image: url('Cnn.png');
+}
 
+#newsLogoFox {
+  background-image: url('fox-logo.png');
 
+}
+
+.trendsclick {
+  border: 2px solid black;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.5em;
+  text-shadow: 5px 5px 5px #000000;
+  cursor: pointer; 
+  cursor: hand;
+}
 
 
 

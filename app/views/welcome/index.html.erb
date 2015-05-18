@@ -1,12 +1,12 @@
 <!-- NAVBAR -->
 <nav>
-  <div class="nav-wrapper red accent-4">
+  <div class="nav-wrapper blue">
 
     <!-- TRENDS SIDEBAR -->
-    <ul id="slide-out" class="side-nav">
+    <ul id="slide-out" class="side-nav  blue">
       <li class="topictext">TOPICS</li>
       <% @trends.each do |tweet| %>
-      <li class="trendsclick"><a href="#!"><%= tweet.hashtags %></a></li>
+      <li class="trendsclick"><%= tweet.hashtags %></li>
       <% end %>
     </ul>
     <a href="#" data-activates="slide-out" class="button-collapse show-on-large">
@@ -15,41 +15,49 @@
 
 
     <!-- LOGO -->
-    <div class="brand-logo center" id="swaylogo">Sway News</div>
+    <div id="fade-in">
+      <div class="brand-logo center" id="swaylogo">Sway News</div>
+    </div>
 
     <!-- SIGNUP + SIGNIN -->
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <% if current_user %>
       <li>Welcome <strong><%= current_user.name%></strong></li>
       <li><%= link_to 'Signout', signout_path %></li>
-      <%else%>
+      <% else %>
 
       <!-- SIGNUP MODAL BUTTON -->
-      <a class="waves-effect waves-light btn modal-trigger blue" href="#Signup" id="navbuttons">Sign Up</a>
+      <a class="waves-effect waves-light btn modal-trigger red accent-4" href="#Signup" id="navbuttons">Sign Up</a>
 
       <!-- SIGNIN MODAL BUTTON-->
-      <a class="waves-effect waves-light btn modal-trigger blue" href="#Signin" id="navbuttons2">Sign In</a>
+      <a class="waves-effect waves-light btn modal-trigger  red accent-4" href="#Signin" id="navbuttons2">Sign In</a>
 
-      <%end%>
+      <% end %>
     </ul>
 
   </div>
 </nav>
 
 <!-- PAGE LAYOUT -->
-<div class="row">
-  <div class="col s6 m6 l6 ">
-    <div class="videoframe">
-    <h2 id="newslogo">CNN</h2>
-      <div class="embed-container-l" id="results"></div>
+<div id="fade-content">
+  <div class="row" id="pageLayout">
+    <div class="col s6 m6 l6 ">
+      <div class = "newslogo"id="newsLogoCNN"></div>
+        <div class="videoframe">
+      
+          <div class="embed-container-l" id="results"></div>
+        </div>
+    </div>
+    <div class="col s6 m6 l6">
+      <div class = "newslogo" id="newsLogoFox"></div>
+        <div class="videoframe">
+      
+          <div class="embed-container-l" id="foxresults"></div>
+        </div>
     </div>
   </div>
-  <div class="col s6 m6 l6">
-    <div class="videoframe">
-    <h2 id="newslogo">FOX</h2>
-      <div class="embed-container-l" id="foxresults"></div>
-    </div>
-  </div>
 </div>
 </div>
 </div>
+
+
