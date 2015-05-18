@@ -19,5 +19,5 @@
 //
 $(document).ready(function() {
 	$('#fade-in').fadeIn(6000);
-    $('#fade-content').fadeIn(25000);
+    $('#fade-content').fadeIn(20000);
 });
