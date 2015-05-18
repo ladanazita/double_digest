@@ -1,9 +1,9 @@
 <!-- NAVBAR -->
 <nav>
-  <div class="nav-wrapper  red darken-4">
+  <div class="nav-wrapper blue">
 
     <!-- TRENDS SIDEBAR -->
-    <ul id="slide-out" class="side-nav  red darken-4">
+    <ul id="slide-out" class="side-nav  blue">
       <li class="topictext">TOPICS</li>
       <% @trends.each do |tweet| %>
       <li class="trendsclick"><%= tweet.hashtags %></li>
@@ -27,10 +27,10 @@
       <% else %>
 
       <!-- SIGNUP MODAL BUTTON -->
-      <a class="waves-effect waves-light btn modal-trigger blue" href="#Signup" id="navbuttons">Sign Up</a>
+      <a class="waves-effect waves-light btn modal-trigger  orange darken-1" href="#Signup" id="navbuttons">Sign Up</a>
 
       <!-- SIGNIN MODAL BUTTON-->
-      <a class="waves-effect waves-light btn modal-trigger blue" href="#Signin" id="navbuttons2">Sign In</a>
+      <a class="waves-effect waves-light btn modal-trigger  orange darken-1" href="#Signin" id="navbuttons2">Sign In</a>
 
       <% end %>
     </ul>
