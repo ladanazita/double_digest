@@ -33,7 +33,7 @@ $(document).ready(function(){
         'https://www.googleapis.com/youtube/v3/search', {
           part: 'snippet',
           channelId: 'UCupvZG-5ko_eiXAupbDfxWw',
-          key: 'AIzaSyAmmyCq4e7hwUtctbTf_GGssWRHJnIO1H8',
+          key: 'AIzaSyBJoTp2SEdAIBc2PbHjSUXVTROuqRjcRx4',
           maxResults: results,
           q: keyWord },
           //  function is running a loop through all the data youtube provided
@@ -65,7 +65,7 @@ $(document).ready(function(){
         'https://www.googleapis.com/youtube/v3/search', {
           part: 'snippet',
           channelId: 'UCXIJgqnII2ZOINSWNOGFThA',
-          key: 'AIzaSyAmmyCq4e7hwUtctbTf_GGssWRHJnIO1H8',
+          key: 'AIzaSyBJoTp2SEdAIBc2PbHjSUXVTROuqRjcRx4',
           maxResults: results,
           q: keyWord},
           function(data){
