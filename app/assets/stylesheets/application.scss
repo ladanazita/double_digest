@@ -61,11 +61,11 @@ main {
 
 /* Standard syntax */
 @keyframes swing {
-    0%   {left:0px; top:0px;}
-    25%  {left:200px; top:0px;}
-    50%  {left:200px; top:200px;}
-    75%  {left:0px; top:200px;}
-    100% {left:0px; top:0px;}
+    0%   {left:390px; top:0px;}
+    25%  {left:1000px; top:0px;}
+    50%  {left:390px; top:0px;}
+    75%  {left:1000px; top:0px;}
+    100% {left:700px; top:0px;}
 }
 
 #swaylogofoot {
